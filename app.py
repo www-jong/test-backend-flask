@@ -5,6 +5,8 @@ from pymysql import Error
 
 app = Flask(__name__)
 
+# 수정 테스트
+
 # 환경 변수에서 설정 가져오기
 PORT = int(os.getenv('PORT', 5000))
 USE_DB = os.getenv('USE_DB', 'true').lower() == 'true'
