@@ -5,7 +5,6 @@ from pymysql import Error
 
 app = Flask(__name__)
 
-# 수정 테스트
 
 # 환경 변수에서 설정 가져오기
 PORT = int(os.getenv('PORT', 5000))
@@ -48,7 +47,8 @@ def health():
     if not USE_DB:
         return jsonify({
             "status": "healthy",
-            "database": "disabled"
+            "database": "disabled",
+            "port": PORT
         })
     
     db_status = "connected" if get_db_connection() else "disconnected"
