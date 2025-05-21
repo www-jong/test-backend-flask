@@ -9,7 +9,7 @@ app = Flask(__name__)
 # 환경 변수에서 설정 가져오기
 PORT = int(os.getenv('PORT', 5000))
 USE_DB = os.getenv('USE_DB', 'true').lower() == 'true'
-
+app_env=os.getenv('APP_ENV', 'unknown')
 # 데이터베이스 설정 (USE_DB가 true일 때만 사용)
 if USE_DB:
     MYSQL_HOST = os.getenv('MYSQL_HOST', 'localhost')
