@@ -50,7 +50,8 @@ def health():
             "database": "disabled",
             "port": PORT,
             "env": app_env,
-            "test":"Test"
+            "test":"Test",
+            "test2":"Test2"
         })
     
     db_status = "connected" if get_db_connection() else "disconnected"
@@ -58,7 +59,8 @@ def health():
         "status": "healthy",
         "database": db_status,
         "env": app_env,
-        "test":"Test"
+        "test":"Test",
+        "test2":"Test2"
     })
 
 @app.route('/db-test')
