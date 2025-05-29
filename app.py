@@ -48,13 +48,15 @@ def health():
         return jsonify({
             "status": "healthy",
             "database": "disabled",
-            "port": PORT
+            "port": PORT,
+            "env": app_env
         })
     
     db_status = "connected" if get_db_connection() else "disconnected"
     return jsonify({
         "status": "healthy",
-        "database": db_status
+        "database": db_status,
+        "env": app_env
     })
 
 @app.route('/db-test')
