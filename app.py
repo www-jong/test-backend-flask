@@ -51,7 +51,7 @@ def health():
             "port": PORT,
             "env": app_env,
             "test":"Test",
-            "test2":"Test7"
+            "test2":"Test8"
         })
     
     db_status = "connected" if get_db_connection() else "disconnected"
