@@ -51,7 +51,7 @@ def health():
             "port": PORT,
             "env": app_env,
             "test":"Test",
-            "버전":"버전1입니다."
+            "버전":"버전2입니다."
         })
     
     db_status = "connected" if get_db_connection() else "disconnected"
